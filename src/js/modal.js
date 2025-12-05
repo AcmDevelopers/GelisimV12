@@ -56,7 +56,7 @@ function openModal(index) {
 	
 	const photoEl = document.getElementById('modalPhoto');
 	if (photoEl) {
-		if (speaker.photo) photoEl.src = speaker.photo;
+		if (speaker.photo) photoEl.src = "profiles/" + speaker.photo;
 	}
 
 	document.getElementById('modalTitle').textContent = speaker.name;

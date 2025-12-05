@@ -6,11 +6,11 @@ Renk kodlarimiz :
 */
 @font-face {
 	font-family: 'Touche';
-	src: url("./Touche-Regular-BF642a2ebfe9ff0.otf");
+	src: url("fonts/Touche-Regular-BF642a2ebfe9ff0.otf");
 }
 @font-face {
 	font-family: 'Touche Bold';
-	src: url("./Touche-Bold-BF642a2ec04a3ad.otf");
+	src: url("fonts/Touche-Bold-BF642a2ec04a3ad.otf");
 }
 html, body {
 	width: 100%;
@@ -262,7 +262,7 @@ html, body {
 		z-index: -1;
 		width: 100%;
 		height: 100%;
-		background-image: url("gelişim_arka_plan_pc.png");
+		background-image: url("backgrounds/gelişim_arka_plan_pc.png");
 		background-repeat: no-repeat;
 		background-size: cover;
 		background-position: center;
@@ -276,7 +276,7 @@ html, body {
 		z-index: -1;
 		width: 100%;
 		height: 100%;
-		background-image: url("gelişim_arka_plan_mob.png");
+		background-image: url("backgrounds/gelişim_arka_plan_mob.png");
 		background-repeat: no-repeat;
 		background-size: cover;
 		background-position: center;
