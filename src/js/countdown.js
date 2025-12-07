@@ -1,5 +1,5 @@
 (function(){
-	const target = new Date('2025-12-14T15:00:00'); // ETKİNLİK TARİHİ VE SAATİ GÜNCELLENECEK
+	const target = new Date('2025-12-17T12:00:00');
 	function pad(n){ return String(n).padStart(2,'0'); }
 
 	function computeParts(){
