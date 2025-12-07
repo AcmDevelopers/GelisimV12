@@ -74,6 +74,7 @@ html, body {
 .biglogo img {
 	width: 100%;
 }
+/*
 .container .bigtitle {
 	display: flex;
 	grid-area: T;
@@ -94,10 +95,10 @@ html, body {
 	font-size: 24px;
 	color: #a1bbd4;
 }
+*/
 .container .paragraph {
 	display: block;
 	grid-area: P;
-
 	padding: 2px 5px;
 }
 .paragraph p {
@@ -106,8 +107,14 @@ html, body {
 	line-height: 24px;
 	transition: all .4s ease;
 }
-.paragraph p:hover {
+.paragraph p .vurgu {
 	color: white;
+	text-decoration: none;
+	font-family: 'Touche Bold';
+	transition: all .4s ease;
+}
+a.vurgu:hover {
+	color: #5c9ed0 !important;
 }
 .container .intro {
 	grid-area: I;
@@ -229,40 +236,83 @@ html, body {
 	line-height: 20px;
 	margin: -10px 20px 20px 20px;
 }
-.social {
-	padding: 0 5px;
-}
-.footer {
-	grid-area: F;
-	width: calc(100% - 5px);
-	margin: 5px;
+.socials {
 	display: flex;
 	flex-direction: row;
-	justify-content: center;
+	gap: 10px;
+}
+.social {
+	padding: 0 5px;
+	height: 20px;
+}
+.footer {
+	display: block;
+	width: 90%;
+	margin: 20px 0 0 0;
+	padding: 20px 5% 20px 5%;
+	backdrop-filter: blur(10px);
+	border: none;
+	box-shadow: 0 0 20px black;
+	transition: all .4s ease;
+	height: 48px;
+}
+.footer:hover {
+	box-shadow: 0 0 20px #5c9ed0;
+}
+.footer-blocks {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+}
+.footer-block {
+	display: block;
+	width: min-content;
+}
+.analink {
+	font-size: 20px;
+	color: white;
+	text-decoration: none;
+	line-height: 28px;
+	float: left;
+}
+.minilink {
+	font-size: 16px;
+	color: #a1bbd4;
+	text-decoration: none;
+	line-height: 20px;
+	float: left;
+}
+.links {
+	display: flex;
+	flex-direction: row;
+	gap: 10px;
+	width: 164px;
 }
 .linkblock {
-	flex: 1;
-	text-align: center;
-	padding: 10px;
-	font-size: 16px;
+	padding: 8px;
 	cursor: pointer;
 	transition: all .4s ease;
+	background-color: #5c9ed0;
+	border-radius: 24px;
+	width: 32px;
+	box-shadow: 0 0 10px black;
 }
 .linkblock:hover {
-	color: white;
+	background-color: white;
+	box-shadow: 0 0 10px #5c9ed0;
 }
-/*
-.container .footer {
-	grid-area: footer;
-	text-align: center;  
+.linkblock img {
+	width: 32px;
+	height: 32px;
+	vertical-align: middle;
 }
-*/
 @media (orientation: landscape) {
 	.background {
 		z-index: -1;
 		width: 100%;
 		height: 100%;
-		background-image: url("backgrounds/gelişim_arka_plan_pc.png");
+		background-image: url("backgrounds/gelisim_arka_plan_pc.png");
 		background-repeat: no-repeat;
 		background-size: cover;
 		background-position: center;
@@ -276,7 +326,7 @@ html, body {
 		z-index: -1;
 		width: 100%;
 		height: 100%;
-		background-image: url("backgrounds/gelişim_arka_plan_mob.png");
+		background-image: url("backgrounds/gelisim_arka_plan_mob.png");
 		background-repeat: no-repeat;
 		background-size: cover;
 		background-position: center;
@@ -291,19 +341,11 @@ html, body {
 		grid-template-columns: 1fr 1fr 1fr;
 		grid-template-rows: 1fr 1fr;
 	}
-	.footer {
-		width: 70%;
-		margin: 5px 15%;
-	}
 }
 @media (min-width: 700px) and (max-width:1199.99px) {
 	.content {
 		grid-template-columns: 1fr 1fr;
 		grid-template-rows: 1fr 1fr 1fr;
-	}
-	.footer {
-		width: 94%;
-		margin: 5px 3%;
 	}
 }
 @media (max-width:467px) or ((min-width:700px) and (max-width:899.99px)) or ((min-width: 1200px) and (max-width:1520px)) {
@@ -315,6 +357,25 @@ html, body {
 	}
 	.isim, .ozet {
 		text-align: center;
+	}
+	@media (max-width:467px) {
+		.footer {
+			height: auto;
+		}
+		.footer-blocks {
+			flex-direction: column;
+			gap: 10px;
+			align-items: center;
+		}
+		.footer-block {
+			display: flex;
+			justify-content: center;
+			flex-direction: column;
+		}
+		.analink, .minilink {
+			float: none;
+			text-align: center;
+		}
 	}
 }
 @media (max-width:699.99px) {
@@ -330,18 +391,17 @@ html, body {
 		display: block;
 		margin: 0 10%;
 	}
-	.nav {
+	.footer {
 		width: 80%;
-		gap: 15px;
+		padding: 20px 10% 20px 10%;
 	}
 	.grid {
 		display: grid;
 		grid-template-areas:
-			"N N N N N N N N N N N N N N N"
+			"N N N N N H H H H H E E E E E"
 			"L L L I I I I I I I I I I I I"
-			"T T T P P P P P P P P P P P P"
-			"C C C C C C C C C C C C C C C"
-			"F F F F F F F F F F F F F F F";
+			"P P P P P P P P P P P P P P P"
+			"C C C C C C C C C C C C C C C";
 		grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
 		gap: 15px;
 	}
@@ -371,11 +431,10 @@ html, body {
 	.grid {
 		display: grid;
 		grid-template-areas:
-			"T T T T T N N N N N N N N N N"
+			"N N N N H H H H H H H E E E E"
 			"L L L I I I I I I I I I I I I"
 			"P P P P P P P P P P P P P P P"
-			"C C C C C C C C C C C C C C C"
-			"F F F F F F F F F F F F F F F";
+			"C C C C C C C C C C C C C C C";
 		grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
 		gap: 15px 5px;
 	}
@@ -395,12 +454,11 @@ html, body {
 	.grid {
 		display: grid;
 		grid-template-areas:
-			"N N N"
-			"L T T"
+			"H H H"
+			"N L E"
 			"I I I"
 			"P P P"
-			"C C C"
-			"F F F";
+			"C C C";
 		grid-template-columns: 1fr 1fr 1fr;
 		gap: 15px 5px;
 	}
