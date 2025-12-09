@@ -1,6 +1,6 @@
 (function(){
-	const target = new Date('2025-12-17T12:00:00');
-	const eventEndDate = new Date('2025-12-18T17:00:00');
+	const target = new Date('2025-12-07T12:00:00');
+	const eventEndDate = new Date('2025-12-08T17:00:00');
 	let moved = false;
 	let copied = false;
 	let statusUpdated = false;
@@ -73,6 +73,8 @@
 		if (!status) return;
 		if (Date.now() > eventEndDate.getTime() && status.textContent !== 'Etkinlik Bitti :(') {
 			status.textContent = 'Etkinlik Bitti :(';
+			status.classList.remove('animated-text');
+			document.getElementById('modalForm').style.display = 'none';
 			print(update)
 		}
 	}

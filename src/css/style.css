@@ -154,9 +154,9 @@ a.vurgu:hover {
 }
 h1#status {
 	text-align: center;
-	color: white;
 	font-family: 'Touche Bold';
-	margin: 8px 0;
+	margin: 6px 0;
+	padding-top: 4px;
 	font-size: 48px;
 	display: none;
 }
@@ -254,12 +254,20 @@ h1#status {
 	display: block;
 	width: min-content;
 }
+.footer-block:first-child {
+	width: 240px;
+}
 .analink {
 	font-size: 20px;
 	color: white;
 	text-decoration: none;
 	line-height: 28px;
 	float: left;
+}
+.analink a {
+	color: white;
+	text-decoration: none;
+	transition: all .4s ease;
 }
 .minilink {
 	font-size: 16px;
@@ -565,15 +573,16 @@ h1#status {
 }
 .modal-title {
 	font-size: 24px;
-	font-family: 'Touche Bold';
-	margin-bottom: 15px;
+	font-family: 'Touche';
+	margin-bottom: 10px;
 	color: white;
 	text-align: center;
+	line-height: 30px;
 }
 .modal-date {
 	font-size: 16px;
 	color: #a1bbd4;
-	margin-bottom: 20px;
+	margin-bottom: 16px;
 	text-align: center;
 }
 .modal-bio {
@@ -582,7 +591,7 @@ h1#status {
 	color: #a1bbd4;
 	margin-bottom: 15px;
 	text-align: center;
-	max-height: calc(100% - 500px);
+	max-height: calc(100% - 458px);
 	overflow-y: auto;
 }
 .modal-socials {
@@ -598,6 +607,17 @@ h1#status {
 .modal-socials a:hover {
 	transform: scale(1.1);
 }
+.modal-socials a#modalForm {
+	color: white;
+	transition: none;
+	font-family: 'Touche';	
+	font-size: 16px;
+	margin-top: 6px;
+	text-decoration: none;;
+}
+.modal-socials #modalForm:hover {
+	transform: none;
+}
 .modal-socials img {
 	width: 24px;
 	height: 24px;
@@ -612,4 +632,26 @@ h1#status {
 .socials img {
 	width: 24px;
 	height: 24px;
+}
+.animated-text {
+	background: linear-gradient(
+		to right,
+		#5c9ed0,
+		#a1bbd4,
+		white,
+		#a1bbd4,
+		#5c9ed0
+	);
+	background-clip: text;
+	color: transparent !important;
+	background-size: 200% auto;
+	animation: graidientAnimation 3s linear infinite;
+}
+@keyframes graidientAnimation {
+	0% {
+		background-position: 200% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
 }

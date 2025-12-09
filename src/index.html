@@ -2,8 +2,9 @@
 <head>
 	<title>ACM Hacettepe - Gelişim V12</title>
 	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width">
-	<meta name="description" content="ACM Hacettepe - Gelişim V12">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="keywords" content="Gelişim, Gelişim V12, ACM Hacettepe, Etkinlik, Seminer, Konferans, Gelişim Etkinliği, Hacettepe Üniversitesi, Öğrenci Topluluğu">
+	<meta name="description" content="ACM Hacettepe Öğrenci Topluluğu olarak her sene düzenlediğimiz GELİŞİM etkinliği, Mehmet Akif Ersoy K Salonunda 17-18 Aralık 2025 tarihlerinde düzenlenecek GELİŞİM V12 ile devam ediyor. Her sene olduğu gibi bu yılki GELİŞİM etkinliği de alanında uzman katılımcıların tecrübeleri, geçmişleri ve bilgi birikimleri üzerine yapacakları sunumlarla öğrencilerin hayatlarına farklı bakış açıları getirmeyi hedefliyor.">
 	<link rel="icon" href="logos/gelisim_logo.png">
 	<link rel="stylesheet" type="text/css" href="css/reset.css">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
@@ -14,7 +15,7 @@
 		<div class="grid">
 			<div class="nondiv" style="display: block; grid-area: N;"></div>
 			<div class="header">
-				<div class="logo"><a href="https://www.acmhacettepe.com"><img src="logos/acm_logo.png"></a></div>
+				<div class="logo"><a href="https://www.acmhacettepe.com" target="_blank"><img src="logos/acm_logo.png"></a></div>
 			</div>
 			<div class="nondiv" style="display: block; grid-area: E;"></div>
 			<div class="biglogo"><img src="logos/gelisim_logo.png"></div>
@@ -41,7 +42,7 @@
 						<span class="timername">Saniye</span>
 					</div>
 				</div>
-				<h1 id="status">Etkinlik Devam Ediyor</h1>
+				<h1 id="status" class="animated-text">Etkinlik Devam Ediyor</h1>
 			</div>
 			<div class="paragraph" id="paragraph"><p>
 				ACM Hacettepe Öğrenci Topluluğu olarak her sene düzenlediğimiz GELİŞİM etkinliği, <a class="vurgu" href="https://maps.app.goo.gl/ckZZNVaTYZzHa3t67" target="_blank" title="Konumu Haritada Göster">Mehmet Akif Ersoy K Salonunda</a> <span class="vurgu">17-18 Aralık 2025</span> tarihlerinde düzenlenecek GELİŞİM V12 ile devam ediyor. Her sene olduğu gibi bu yılki GELİŞİM etkinliği de alanında uzman katılımcıların tecrübeleri, geçmişleri ve bilgi birikimleri üzerine yapacakları sunumlarla öğrencilerin hayatlarına farklı bakış açıları getirmeyi hedefliyor.
@@ -52,7 +53,7 @@
 	<div class="footer">
 		<div class="footer-blocks">
 			<div class="footer-block">
-				<a href="https://www.acmhacettepe.com" target="_blank" class="analink">ACM Hacettepe</a>
+				<span class="analink"><a href="https://www.acmhacettepe.com" target="_blank">ACM Hacettepe</a> <span style="font-size: 10px; vertical-align: middle;">&#9679;</span> <a href="https://linktr.ee/acmhacettepe" target="_blank">Linkler</a></span>
 				<a href="https://mail.google.com/mail/?view=cm&fs=1&to=iletisim@acmhacettepe.com" target="_blank" class="minilink">iletisim@acmhacettepe.com</a>
 			</div>
 			<div class="footer-block"">
@@ -67,17 +68,19 @@
 	<div class="modal-overlay" id="modalOverlay">
 		<div class="modal">
 			<button class="modal-close" onclick="closeModal()">&times;</button>
-			<img id="modalPhoto" class="photo" src="" alt="Speaker photo" style="display:block; margin:0 auto 20px; width: 200px; height: 200px; border-radius: 100px;">
+			<img id="modalPhoto" class="photo" src="" alt="Speaker photo" style="display:block; margin:0 auto 10px; width: 200px; height: 200px; border-radius: 100px;">
 			<div class="modal-title" id="modalTitle"></div>
 			<div class="modal-date" id="modalDate"></div>
 			<div class="modal-bio" id="modalBio"></div>
 			<div class="modal-socials">
-				<a href="#" id="modalInstagram"><img src="logos/ins2.png" alt="Instagram"></a>
-				<a href="#" id="modalX"><img src="logos/yt2.png" alt="YouTube"></a>
+				<a href="#" id="modalForm" class="animated-text" target="_blank">Dışarıdan Katıl</a>
+				<a href="#" id="modalInstagram" target="_blank"><img src="logos/ins2.png" alt="Instagram"></a>
+				<a href="#" id="modalYt" target="_blank"><img src="logos/yt2.png" alt="YouTube"></a>
 			</div>
 		</div>
 	</div>
-	<script src="js/modal.js"></script>
+	<script src="js/data.js"></script>
+	<script src="js/speakers.js"></script>	
 	<script src="js/countdown.js"></script>
 </body>
 </html>
