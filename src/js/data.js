@@ -59,7 +59,7 @@ var speakersData = [
 		date: "18 Aralık",
 		time: "15.00",
 		profession: "Kadın Hastalıkları ve Doğum Uzmanı",
-		bio: "Uludağ Üniversitesi Tıp Fakültesi mezunudur. Uzmanlığını tamamladıktan sonra yüksek lisansını 'halk sağlığı', doktorasını ise 'sosyal psikoloji' üzerine Başkent Üniversitesinde yapmıştır. Birçok üniversitede 'jinekolojik kozmetoloji' alanında eğitmen olarak görev almaktadır. Tıbbi birikimini toplumsal farkındalık çalışmalarıyla birleştiren Erdoğan; 5 kitap yayımlamıştır. Bunlara ek olarak 'kozmetik jinekoloji' alanında global ölçekte kabul gören 6 akademik kitabın da editörlüğünü üstlenmiştir.",
+		bio: "Uludağ Üniversitesi Tıp Fakültesi mezunudur. Uzmanlığını tamamladıktan sonra yüksek lisansını 'halk sağlığı', doktorasını ise 'sosyal psikoloji' üzerine Başkent Üniversitesinde yapmıştır. Birçok üniversitede 'jinekolojik kozmetoloji' alanında eğitmen olarak görev almaktadır. Tıbbi birikimini toplumsal farkındalık çalışmalarıyla birleştiren Erdoğan, 5 kitap yayımlamıştır. Bunlara ek olarak 'kozmetik jinekoloji' alanında global ölçekte kabul gören 6 akademik kitabın da editörlüğünü üstlenmiştir.",
 		instagram: "https://www.instagram.com/drgokcenerdogan/",
 		yt: "https://www.youtube.com/c/GökçenErdoğan",
 		photo: "gokcen_erdogan.png",
